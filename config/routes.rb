@@ -1,0 +1,11 @@
+Rails.application.routes.draw do
+  get 'students/index'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+resources  :students
+  root "articles#index"
+
+  get "/articles", to: "articles#index"
+  get "/articles/:id", to: "articles#show"
+
+
+end
